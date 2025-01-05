@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { Platform } from 'react-native';
+import { Platform, Text } from 'react-native';
 
 import { HapticTab } from '@/components/HapticTab';
 import { Colors } from '@/constants/Colors';
@@ -31,12 +31,19 @@ export default function TabLayout() {
           },
           default: {},
         }),
+        tabBarLabelStyle: {
+          fontSize: 10, 
+          marginTop: 0,
+        },
+        tabBarIconStyle: {
+          flexDirection: 'column',
+        },
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          tabBarLabel: 'Home',
           tabBarIcon: ({ color }) => (
             <HomeIcon width={28} height={28} fill={color} />
           ),
@@ -45,7 +52,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="explore"
         options={{
-          title: 'Explore',
+          tabBarLabel: 'Explore',
           tabBarIcon: ({ color }) => (
             <ExploreIcon width={28} height={28} fill={color} />
           ),
@@ -54,7 +61,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="profile"
         options={{
-          title: 'Profile',
+          tabBarLabel: 'Profile',
           tabBarIcon: ({ color }) => (
             <ProfileIcon width={28} height={28} fill={color} />
           ),
@@ -63,7 +70,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="voiceScreen"
         options={{
-          title: 'Voice',
+          tabBarLabel: 'Voice',
           tabBarIcon: ({ color }) => (
             <VoiceIcon width={28} height={28} fill={color} />
           ),
@@ -72,7 +79,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="gameScreen"
         options={{
-          title: 'Game',
+          tabBarLabel: 'Game',
           tabBarIcon: ({ color }) => (
             <GameIcon width={28} height={28} fill={color} />
           ),
@@ -81,7 +88,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="movieScreen"
         options={{
-          title: 'Movie',
+          tabBarLabel: 'Movie',
           tabBarIcon: ({ color }) => (
             <MovieIcon width={28} height={28} fill={color} />
           ),
@@ -90,7 +97,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="cgIllustrationsScreen"
         options={{
-          title: 'CG+Illustrations',
+          tabBarLabel: 'CG+Illustrations',
           tabBarIcon: ({ color }) => (
             <CGIcon width={28} height={28} fill={color} />
           ),
@@ -99,16 +106,16 @@ export default function TabLayout() {
       <Tabs.Screen
         name="mangaScreen"
         options={{
-          title: 'Manga',
+          tabBarLabel: 'Manga',
           tabBarIcon: ({ color }) => (
             <MangaIcon width={28} height={28} fill={color} />
           ),
         }}
       />
-       <Tabs.Screen
+      <Tabs.Screen
         name="aiScreen"
         options={{
-          title: 'AI',
+          tabBarLabel: 'AI',
           tabBarIcon: ({ color }) => (
             <AIIcon width={28} height={28} fill={color} />
           ),

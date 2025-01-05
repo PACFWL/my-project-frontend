@@ -14,6 +14,7 @@ import GameIcon from '../../assets/images/game.svg';
 import MovieIcon from '../../assets/images/movie.svg';
 import CGIcon from '../../assets/images/cg_illustrations.svg';
 import MangaIcon from '../../assets/images/manga.svg';
+import AIIcon from '../../assets/images/ai.svg';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -109,7 +110,7 @@ export default function TabLayout() {
         options={{
           title: 'AI',
           tabBarIcon: ({ color }) => (
-            <MangaIcon width={28} height={28} fill={color} />
+            <AIIcon width={28} height={28} fill={color} />
           ),
         }}
       />

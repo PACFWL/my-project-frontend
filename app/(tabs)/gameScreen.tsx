@@ -1,12 +1,11 @@
 import React from 'react';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import GameList from '../screens/game/list/index.jsx';
 
 export default function GameScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Game Screen</Text>
+      <GameList />
     </View>
   );
 }
@@ -16,8 +15,5 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  text: {
-    fontSize: 24,
   },
 });

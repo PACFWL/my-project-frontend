@@ -21,25 +21,31 @@ export default function TabLayout() {
 
   return (
     <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarStyle: Platform.select({
-          ios: {
-            position: 'absolute',
-          },
-          default: {},
-        }),
-        tabBarLabelStyle: {
-          fontSize: 10, 
-          marginTop: 0,
+    screenOptions={{
+      tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+      headerShown: false,
+      tabBarButton: HapticTab,
+      tabBarStyle: Platform.select({
+        ios: {
+          position: 'absolute',
+          paddingBottom: 10,
+          height: 70, 
         },
-        tabBarIconStyle: {
-          flexDirection: 'column',
+        default: {
+          paddingBottom: 0,
+          height: 55,
         },
-      }}
-    >
+      }),
+      tabBarLabelStyle: {
+        fontSize: 12,
+        marginTop: 0,
+      },
+      tabBarIconStyle: {
+        flexDirection: 'column',
+      },
+    }}
+  >
+  
       <Tabs.Screen
         name="index"
         options={{

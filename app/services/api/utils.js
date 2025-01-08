@@ -1,5 +1,6 @@
 import { API_URL } from '@env';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+console.log(API_URL); 
 
 export const handleResponse = async (response) => {
   if (!response.ok) {
